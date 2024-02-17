@@ -31,8 +31,26 @@ for (let i=0; i < emojis.length; i++) {
   let card = document.createElement("div");
   // com a class item
   card.className = "item";
+
   // o elemento será pego na shuffleEmojis de acordo com a posição
   card.innerHTML = shuffleEmojis[i];
+  
+  card.onclick = handleClick;
+
   // faz o apêndice do card na div principal (".game")
   document.querySelector(".game").appendChild(card);
 }
+
+function handleClick() {
+  if(openCards.length < 2) {
+    // sempre que um card for clicado(aberto), é adicionado a class "cardOpen"
+    this.classList.add("cardOpen");
+    openCards.push(this);
+  };
+
+  if (openCards.length == 2) {
+    setTimeout(checkMatch, 500);
+  }
+}
+
+function checkMatch() {}
