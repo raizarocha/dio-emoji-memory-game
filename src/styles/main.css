@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ca7ba1;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* propriedade gap define os espaços entre as linhas e as colunas */
+  gap: 30px;
+  background: linear-gradient(
+    /* (deg) raio para onde aponta o gradiente */
+    356deg,
+    #eeaeca 0%,
+    #94bbe9 100%
+  );
+  padding: 40px 60px;
+}
